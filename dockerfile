@@ -4,7 +4,7 @@ RUN mkdir /home/foodlog
 WORKDIR /home/foodlog
 
 RUN apt-get update
-RUN apt-get install nodejs npm
+RUN apt-get -y install nodejs npm
 RUN npm install --global yarn
 
 COPY ./Gemfile /home/foodlog/Gemfile
