@@ -21,6 +21,13 @@
   </div>
 
   <div class="field">
+    <%= form.label :category, class: "label"%>
+    <div class="select">
+      <%= form.select :category_id, Category.all.collect {|u| [u.title, u.id]}, {}%>
+    </div>
+  </div>
+
+  <div class="field">
     <%= form.label :calories, class: "label" %>
     <%= form.number_field :calories, class:"input"%>
   </div>
